@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.content-container {
+    display: flex; /* Desktop: side-by-side columns */
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.column {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile-First Approach: CSS for desktop first, then use media query for mobile.
+   Desktop-First Approach: CSS for desktop first, then use media query for mobile.
+   The current CSS is a desktop-first approach. Let's make it mobile-friendly.
+*/
+
+/* Media Query for Mobile and Tablet Devices */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Mobile: stack columns vertically */
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        margin: 0;
+        padding: 0.5rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
